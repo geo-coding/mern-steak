@@ -29,9 +29,19 @@ import React, { Component } from 'react';
 
 export class Header extends Component {
   render() {
+    const style = {
+      header: {
+        background: '#03a9f4'
+      },
+      logo: {
+        color: '#fff',
+        fontFamily: 'Anton',
+        textAlign: 'center'
+      }
+    };
     return (
-      <header>
-        <div className=''>Logo</div>
+      <header style={style.header}>
+        <div style={style.logo}>Logo</div>
         <input type='text' />
       </header>
     );

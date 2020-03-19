@@ -24,6 +24,7 @@
 // };
 
 // export default Header;
+import '../css/style.css';
 
 import React, { Component } from 'react';
 

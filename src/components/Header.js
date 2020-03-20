@@ -49,7 +49,8 @@ import React, { Component } from 'react';
 // }
 export class Header extends Component {
   state = {
-    keywords: 'hell no'
+    title: 'the keywords are:',
+    keywords: ''
   };
   inputChangeHandler = event => {
     // console.log(event.target.value);
@@ -65,6 +66,8 @@ export class Header extends Component {
           Logo
         </div>
         <input type='text' onChange={this.inputChangeHandler} />
+        <div>{this.state.title}</div>
+        <div>{this.state.keywords}</div>
       </header>
     );
   }

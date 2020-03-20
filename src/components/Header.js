@@ -28,35 +28,43 @@ import '../css/style.css';
 
 import React, { Component } from 'react';
 
+// export class Header extends Component {
+// render() {
+//   const style = {
+//     header: {
+//       background: '#03a9f4'
+//     },
+//     logo: {
+//       color: '#fff',
+//       fontFamily: 'Anton',
+//       textAlign: 'center'
+//     }
+//   };
+//   return (
+//     <header style={style.header}>
+//       <div style={style.logo}>Logo</div>
+//       <input type='text' />
+//     </header>
+//   );
+// }
 export class Header extends Component {
-  // render() {
-  //   const style = {
-  //     header: {
-  //       background: '#03a9f4'
-  //     },
-  //     logo: {
-  //       color: '#fff',
-  //       fontFamily: 'Anton',
-  //       textAlign: 'center'
-  //     }
-  //   };
-  //   return (
-  //     <header style={style.header}>
-  //       <div style={style.logo}>Logo</div>
-  //       <input type='text' />
-  //     </header>
-  //   );
-  // }
+  state = {
+    keywords: 'hell no'
+  };
   inputChangeHandler(event) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
+    this.setState({
+      keywords: event.target.value
+    });
   }
   render() {
+    console.log(this.state.keywords);
     return (
       <header>
         <div className='logo' onClick={() => console.log('i was clicked')}>
           Logo
         </div>
-        <input type='text' onChange={this.inputChangeHandler} />
+        <input type='text' onChange={this.inputChangeHandler.bind(this)} />
       </header>
     );
   }

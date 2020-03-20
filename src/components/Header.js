@@ -47,11 +47,16 @@ export class Header extends Component {
   //     </header>
   //   );
   // }
+  inputChangeHandler(event) {
+    console.log(event.target.value);
+  }
   render() {
     return (
       <header>
-        <div className='logo'>Logo</div>
-        <input type='text' />
+        <div className='logo' onClick={() => console.log('i was clicked')}>
+          Logo
+        </div>
+        <input type='text' onChange={this.inputChangeHandler} />
       </header>
     );
   }

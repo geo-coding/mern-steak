@@ -51,12 +51,12 @@ export class Header extends Component {
   state = {
     keywords: 'hell no'
   };
-  inputChangeHandler(event) {
+  inputChangeHandler = event => {
     // console.log(event.target.value);
     this.setState({
       keywords: event.target.value
     });
-  }
+  };
   render() {
     console.log(this.state.keywords);
     return (
@@ -64,7 +64,7 @@ export class Header extends Component {
         <div className='logo' onClick={() => console.log('i was clicked')}>
           Logo
         </div>
-        <input type='text' onChange={this.inputChangeHandler.bind(this)} />
+        <input type='text' onChange={this.inputChangeHandler} />
       </header>
     );
   }
